@@ -1,12 +1,15 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable max-len */
+/* eslint-disable import/no-dynamic-require */
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-require('dotenv').config()
+require('dotenv').config();
 
-//Init
+// Init
 const app = express();
 require('./database');
 require('./config/passport');
@@ -18,8 +21,7 @@ app.engine('hbs',
   exphbs({
     defaultLayout: 'main.hbs',
     extname: '.hbs',
-  })
-);
+  }));
 app.set('view engine', 'hbs');
 
 // Middelwares
@@ -31,17 +33,18 @@ app.use(
     secret: process.env.SECRET_CONFIG,
     resave: true, // en cada peticion la sesion se vuelve a guardar
     saveUninitialized: true, // si inicializamos una peticion en una peticion y no se guarda nada, se guarda solo automaticamente
-  })
+  }),
 );
 app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
 app.use(require('./routes/person'));
+
 app.use('/panel-admin/', require(path.join(__dirname, 'routes', 'panelAdmin')));
 
 // Public
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Server on
 app.listen(app.get('port'), (req, res) => {
