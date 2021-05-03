@@ -11,22 +11,23 @@
   </section>
   <div class="container-fluid">
     <div class="row col-12 justify-content-center p-1">.
-      <form class="mt-5">
+      <form class="mt-5" action="/add-user" method="POST">
         <div class="form-group">
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-          <small id="emailHelp" class="form-text text-muted" style="color:white!important">No te enviaremos Spam ni compartiremos tu informaci{on}.</small>
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+          <small id="emailHelp"  class="form-text text-muted" style="color:white!important">No te enviaremos Spam ni compartiremos tu informaci{on}.</small>
         </div>
         <div class="form-group"> 
-          <input type="name" class="form-control mt-2" id="exampleInputPassword1" placeholder="Nombre">
+          <input type="name"  name="name" class="form-control mt-2" id="exampleInputPassword1" placeholder="Nombre">
         </div>
         <div class="form-group ">
-          <input type="location" class="form-control mt-2" id="city" placeholder="Ciudad">
+          <input type="location" name="location" class="form-control mt-2" id="city" placeholder="Ciudad">
         </div>
         <div class="form-check mt-2 text-white">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Estoy de acuerdo </label>
         </div>
-        
+        <button type="submit"
+            class="btn m-sm-3 m-md-4 m-lg-4 m-xl-5 img-fluid btn-lg btn-info shadow ">&nbsp;Aplicar&nbsp;</button>
       </form>
     </div>
   </div>

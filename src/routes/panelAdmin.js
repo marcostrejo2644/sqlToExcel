@@ -29,6 +29,11 @@ router.get('/dashboard',
   }
 );
 
+router.post('/logout', (req, res) => {
+  req.logout();
+  res.redirect('/panel-admin/login');
+})
+
 // Bajar Excel
 router.post('/user-download',
   (req, res, next) => {
@@ -55,6 +60,8 @@ router.post('/user-download',
     });
 });
 
+
+// Manejar Administradores
 // Add Admin User DEV
 router.post('/new-admin', (req, res) => {
   const { passwordO, useradmin } = req.body;
@@ -73,6 +80,17 @@ router.post('/new-admin', (req, res) => {
     );
   }
   res.send('User is Saved');
+});
+
+// Eliminar Administrador
+router.post('/delete-user/:id', (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  database.query('DELETE FROM user_admin WHERE id = ?', [id], (err, response) => {
+    if (err) throw err;
+    console.log('Deleted Item: ', id);
+  });
+  res.send('Item Deleted');
 });
 
 module.exports = router;
