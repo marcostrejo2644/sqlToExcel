@@ -45,6 +45,11 @@ http://localhost:4000/
 ```
 http://localhost:4000/panel-admin/
 ```
+- Para ingresar en el panel de administrador usar las credenciales de:
+```
+User: adminTest
+Password: prueba123
+```
 
 
 
