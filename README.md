@@ -17,7 +17,7 @@ _Que cosas necesitas para instalar el software y como instalarlas_
 Para este proyecto es necesario tener instalado nodejs y poder levantar una base de datos SQL
 ```
 
-### Instalación 🔧
+### Instalación 🔧 y Despliegue 📦
 
 - Levantar la base de datos SQL, puede ser utilizando XAMPP, WAMP o el que prefieras
 - Dentro de la raiz del proyecto agregar un archivo .env con las siguientes variables:
@@ -56,10 +56,6 @@ _Las pruebas generadas con JEST & testing library se inician con el comando "npm
 
 _Las pruebas en su mayor parte unitarias se ocuparan de verificar el funcionamiento frontEnd y se centraran en obtener el mayor Coverage desde el lado del usuario.. Se evaluara hacer testing en el Back_
 
-
-## Despliegue 📦
-
-_Inicializa con "npm start" _
 
 ## Construido con 🛠️
 
