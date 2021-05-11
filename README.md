@@ -1,6 +1,6 @@
 # Integration Excel Exports by dataBase
 
-_(Version español)En este proyecto nos enfocaremos en realizar una web estatica con la funcionalidad de poder extrar informacion de base de datos infresada mediante un formulario.Integrando del lado del front end html,bootstrap,scss,js utilizando handlebars y del lado del back creando las rutas, guardar la info en una base de datos SQL, creando un panel de administrador donde se pueda bajar la info de los usuarios en formato .xlsx (excel) y realizaremos las correspondientes pruebas unitarias con Jest & testing library.  _
+En este proyecto nos enfocaremos en realizar una web estatica con la funcionalidad de poder extrar informacion de base de datos infresada mediante un formulario.Integrando del lado del front end html,bootstrap,scss,js utilizando handlebars y del lado del back creando las rutas, guardar la info en una base de datos SQL, creando un panel de administrador donde se pueda bajar la info de los usuarios en formato .xlsx (excel) y realizaremos las correspondientes pruebas unitarias con Jest & testing library.
 
 ## Comenzando 🚀
 
@@ -64,7 +64,6 @@ _Las pruebas en su mayor parte unitarias se ocuparan de verificar el funcionamie
 
 ## Construido con 🛠️
 
-* [SASS](https://sass-lang.com/) - Libreria scss utilizada
 * [NPM](https://www.npmjs.com/) - Manejador de dependencias
 * [BOOTSTRAP](https://getbootstrap.com/docs/4.1/getting-started/introduction/) - Framework css
 * [JEST]() - Unit testings
