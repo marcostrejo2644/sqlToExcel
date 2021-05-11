@@ -10,13 +10,13 @@
       </div>
       <div class="container-fluid col-12 col-md-6 pr-5 pl-5">
         <div class="row">
-          <form class="login bg-info border-info col-sm-12 shadow-lg" autocomplete="on" action="/panel-admin/login"
+          <form class="login bg-info col-sm-12" autocomplete="on" action="/panel-admin/login"
             method="POST" onSubmit="dashboard">
-            <div class="form-group shadow">
+            <div class="form-group">
               <label for="username"></label>
               <input type="text" class="form-control" name="username" id="username" placeholder="Usuario">
             </div>
-            <div class="form-group shadow ">
+            <div class="form-group">
               <label for="password"></label>
               <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
             </div>
@@ -28,14 +28,18 @@
             </div>
             <div class="fr container-fluid d-inline">
               <div class="row">
-                <div class="col-7 container-fluid align-self-md-end">
+                <div class="col-8 container-fluid align-self-md-end">
                   <a class="text-white" href="#">Recuperar Contraseña</a>
                   <a class="text-white" href="#">Registrarse</a>
                 </div>
-                <div class="col-4 container-fluid">
-                  <button type="submit" value="submit"
-                    class="btn btn1 btn-outline-info px-sm-4 px-md-2 px-lg-4  float-right shadow-sm text-white">
+                <div class="col-4 container-fluid login-box">
+                  <button id="button-login" type="submit" value="submit"
+                    class="btn btn-outline-info px-sm-4 float-right text-white">
                     Login
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                   </button>
                   <br>
                 </div>
