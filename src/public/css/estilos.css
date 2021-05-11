@@ -203,7 +203,7 @@ FOOTER
 ---------------------------*/
 
 .pie-de-pagina {
-  position: relative;
+  position: fixed;
   left: 0;
   bottom: 0%;
   width: 100%;
@@ -211,6 +211,7 @@ FOOTER
   padding: 1em 0;
   font-size: 0.9em;
   margin: 0;
+  text-align: center;
 }
 
 .pie-de-pagina2 {
@@ -263,6 +264,13 @@ h2 {
     font-size: .9rem;
   }
 }
+
+@media(max-width:415px) {
+  .container-form {
+    min-width: 220px;
+  }
+}
+
 
 /*--------------------------
 animacion
