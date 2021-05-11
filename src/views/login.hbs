@@ -1,5 +1,6 @@
-<section class="somos-scanai">
-  <div class="container mt-sm-0 mt-md-2 mt-lg-3">
+<section class="container-log">
+  <div class="particles" id="particles-js"></div>
+  <div class="container log-init">
     <div class="row">
       <div class="col-12 col-md-6 text-center text-md-right align-self-md-center ">
         <h4 class="h2 font-weight-bold text-light ">
@@ -7,45 +8,40 @@
           con la frente en alto<br>
           ScanAi Developer Factor.</h4>
       </div>
-      <div class="col-12 col-md-6  ">
-        <div class="container-fluid ">
-          <div class="row p-1">
-            <div class="col-sm-2 "></div>
-            <form class="login bg-info border-info col-sm-8 shadow-lg" autocomplete="on"  action="/panel-admin/login" method="POST" onSubmit="dashboard" >
-              <br>
-              <div class="form-group shadow">
-                <label for="username"></label>
-                <input type="text" class="form-control" name="username" id="username" placeholder="Username">
-              </div>
-              <div class="form-group shadow ">
-                <label for="password"></label>
-                <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
-              </div>
-              <div class="container-fluid text-light">
-                <div class="row d-block">
-                  <div class="terms form-group form-check  ">
-                  </div>
+      <div class="container-fluid col-12 col-md-6 pr-5 pl-5">
+        <div class="row">
+          <form class="login bg-info border-info col-sm-12 shadow-lg" autocomplete="on" action="/panel-admin/login"
+            method="POST" onSubmit="dashboard">
+            <div class="form-group shadow">
+              <label for="username"></label>
+              <input type="text" class="form-control" name="username" id="username" placeholder="Usuario">
+            </div>
+            <div class="form-group shadow ">
+              <label for="password"></label>
+              <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña">
+            </div>
+            <div class="container-fluid text-light">
+              <div class="row d-block">
+                <div class="terms form-group form-check  ">
                 </div>
               </div>
-              <div class="fr container-fluid d-inline">
-                <div class="row" >
-                  <div class="col-lg-offset-0 container-fluid ">
-                  </div>
-                  <div class="col-7 container-fluid align-self-md-end">
-                    <a href="#">Recuperar Password</a>
-                    <a href="#">Registrar</a>
-                  </div>
-                  <div class="col-4 container-fluid">
-                    <button type="submit" value="submit" 
-                      class="btn btn1 btn-outline-info px-sm-4 px-md-2 px-lg-4  float-right shadow-sm">
-                      Login
-                    </button>
-                    <br>
-                  </div>
+            </div>
+            <div class="fr container-fluid d-inline">
+              <div class="row">
+                <div class="col-7 container-fluid align-self-md-end">
+                  <a class="text-white" href="#">Recuperar Contraseña</a>
+                  <a class="text-white" href="#">Registrarse</a>
+                </div>
+                <div class="col-4 container-fluid">
+                  <button type="submit" value="submit"
+                    class="btn btn1 btn-outline-info px-sm-4 px-md-2 px-lg-4  float-right shadow-sm text-white">
+                    Login
+                  </button>
+                  <br>
                 </div>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

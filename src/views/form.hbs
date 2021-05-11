@@ -1,33 +1,36 @@
-<section class="somos-scanai pt-3 mt-2">
-    <div class="container-fluid bg-2 p-3">
-      <div class="row b-3">
-        <div class="col-12 text-center align-self-md-center "><br><br><br>
-          <button type="submit"
-            class="btn m-sm-3 m-md-4 m-lg-4 m-xl-5 img-fluid btn-lg btn-info shadow ">&nbsp;Aplicar&nbsp;</button>
-          <br><br>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div class="container-fluid">
-    <div class="row col-12 justify-content-center p-1">.
-      <form class="mt-5" action="/add-user" method="POST">
-        <div class="form-group">
-          <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-          <small id="emailHelp"  class="form-text text-muted" style="color:white!important">No te enviaremos Spam ni compartiremos tu informaci{on}.</small>
-        </div>
-        <div class="form-group"> 
-          <input type="name"  name="name" class="form-control mt-2" id="exampleInputPassword1" placeholder="Nombre">
-        </div>
-        <div class="form-group ">
-          <input type="location" name="location" class="form-control mt-2" id="city" placeholder="Ciudad">
-        </div>
-        <div class="form-check mt-2 text-white">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Estoy de acuerdo </label>
-        </div>
-        <button type="submit"
-            class="btn m-sm-3 m-md-4 m-lg-4 m-xl-5 img-fluid btn-lg btn-info shadow ">&nbsp;Aplicar&nbsp;</button>
-      </form>
+<section class="pt-3 mt-2">
+  <!-- fotografia background eyes -->
+  <div class="container-fluid bg-2 p-3">
+    <div class="img-background__upform">
     </div>
   </div>
+</section><!-- end fotografia background eyes -->
+<div class="particles" id="particles-js"></div>
+<div class="container-fluid">
+  <div class="col-12 row justify-content-center ml-1">
+    <form class="container-form" action="/add-user" method="POST">
+      <!-- Formulario de Registro -->
+      <h2 class="text-white pb-3">Registrate para acceder al contenido</h2>
+      <div class="form-group">
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Email">
+        <small id="emailHelp" class="form-text text-white">
+          No te enviaremos Spam ni
+          compartiremos tu informacion.</small>
+      </div>
+      <div class="form-group">
+        <input type="name" name="name" class="form-control mt-2" id="exampleInputPassword1" placeholder="Nombre">
+      </div>
+      <div class="form-group">
+        <input type="location" name="location" class="form-control mt-2" id="city" placeholder="Ciudad">
+      </div>
+      <div class="form-check mt-2 text-white pt-3">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Estoy de acuerdo </label>
+      </div>
+      <div class="container_submit mt-3 mb-3">
+        <button type="submit" class="btn mb-3 btn-info">Aplicar</button>
+      </div>
+    </form><!-- End Formulario de Registro -->
+  </div>
+</div><!-- end Container form -->

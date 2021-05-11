@@ -1,161 +1,170 @@
 @charset "UTF-8";
 
-
-body, html {
-  height: 98% !important;
-  width: 100%!important;
-}
-
-
 /*----------------------------------------
 SOBREESCRIBIENDO  LOS ESTILOS DE BOOTSTRAP
 ------------------------------------------*/
-
-#admin {display:inline ;
-position: relative;
-padding-top: 1.6em;}
+#admin {
+  margin: 0
+}
 
 .bg-primary {
-  background-color: rgb(0,114,153) 0% !important;}
+  background-color: #007299 0% !important;
+}
 
 .bg-success {
-  background-color: rgb(3,92,122) 0% !important;}
+  background-color: rgb(3, 92, 122) 0% !important;
+}
 
 .bg-danger {
-  background-color: rgb(57,59,60) !important;
-  background-image: url(../images/status2.png);
-  background-position: center!important;
-  background-repeat:repeat!important;
-  background-size:cover!important;
-  height: 100% !important;
-   width: 100%!important
+  background-color: #3272bb !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
-.bg-info {background-color: rgb(31,94,131, 0.3)!important;
-border-radius:30px;
+.bg-info {
+  background-color: rgba(41, 115, 158, 0.3) !important;
+  border-radius: 20px;
 }
 
-.bg-info2 {background-color: rgba(27,185,210,0.5)!important;
-border-radius:30px;
-box-shadow:  0 4px 15px rgb(12,12,12,0.5)
+.bg-info2 {
+  background-color: hsla(188, 77%, 46%, 0.5) !important;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgb(12, 12, 12, 0.5)
 }
 
 .text-primary {
-  color: rgb(0,114,153) !important; }
+  color: rgb(0, 114, 153) !important;
+}
 
 .btn-primary {
-  background-color: rgb(19,89,149) !important;
-  border-color: rgb(124,0,181) !important; }
+  background-color: rgb(19, 89, 149) !important;
+  border-color: rgb(124, 0, 181) !important;
+}
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: rgb(0,232,213) !important; }
+  background-color: rgb(0, 232, 213) !important;
+}
 
 .btn-primary:active {
-  background-color: rgb(181,29,0) !important;
-  border-color: rgb(130,21,0) !important; }
+  background-color: rgb(181, 29, 0) !important;
+  border-color: rgb(130, 21, 0) !important;
+}
 
 .btn-primary:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgb(255, 64, 28) !important;
-          box-shadow: 0 0 0 0.2rem rgb(255, 64, 28) !important; }
- 
- .btn-lg {font-size: 35px;
-  border-radius:15px}
-
-  .btn-info {margin: 1.8em!important
-;box-shadow: 2px 2px 10px 3px #383737!important;
+  box-shadow: 0 0 0 0.2rem rgb(255, 64, 28) !important;
 }
 
-  .btn-info:hover {background-color:rgb(28,200,150);
-    box-shadow: 2px 1px 3px 0px #434343!important;
-    background-position: right center!important;
-   }
+.btn-lg {
+  font-size: 35px;
+  border-radius: 15px
+}
 
-  .btn-lg {box-shadow: 1px 1px 5px}
-  .btn-lg:hover{box-shadow: 0px 0px;
-    color:white;}
-  .btn-info2:hover{background-color:rgb(244,5,5);
-  color: rgb(255,255,255) 
-   }
-   .btn-scan{
-    box-shadow: 2px 2px 10px 3px #383737!important;
-    background-color:rgb(244,5,5);
-   color: #01E9F8!important }
+.btn-info {
+  box-shadow: 2px 2px 22px 0px rgba(34, 85, 105, 0.4);
+  border: none;
+}
+
+.btn-info:hover {
+
+  background-color: #1cc896;
+  border: none;
+}
+
+
+
+.btn-info2:hover {
+  background-color: rgb(244, 5, 5);
+  color: rgb(255, 255, 255)
+}
+
 /*--------------------------
 ESTILOS DEL DISEÑO
 ---------------------------*/
 
-.txt {line-height:2.5em!important}
+.txt {
+  line-height: 2.5em
+}
 
 body {
-  color: rgb(68,72,74);
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+}
 
-nav {height:2.8rem}
 
 .card:hover {
-  -webkit-box-shadow: 0 0 10px rgb(12,12,12);
-          box-shadow: 0 0 10px rgb(12,12,12); }
+  -webkit-box-shadow: 0 0 10px rgb(12, 12, 12);
+  box-shadow: 0 0 10px rgb(12, 12, 12);
+}
 
 /*------------------------
-SHOW DE LOS MEDIAS QUERIES
+MEDIA QUERIES
 ------------------------*/
- @media (min-width:333px) and (max-width: 767px) {
-  html 
-  {
-    font-size: 0.92rem; }}
-
-    @media (min-width:1361px) {
-  html 
-  {
-    font-size: 1.08rem; } }
-
-  
-    @media (min-width:1600px) {
+@media (min-width:333px) and (max-width: 767px) {
   html {
-    font-size: 1.50rem;
+    font-size: 0.92rem;
+  }
+}
 
-    } 
-    .bg-2{padding-bottom: 2rem}}
+@media (min-width:1361px) {
+  html {
+    font-size: 1.08rem;
+  }
+}
+/*--------------------------
+nav
+---------------------------*/
 
 
 /*--------------------------
 Login
 ---------------------------*/
 
-.login {
- background-position: center!important;
-  background-repeat: no-repeat!important;
-  background-size: contain !important;
+.form-group {
+  padding: 2;
+  margin: 0
 }
-.form-group{padding:2!important;
-margin:0!important}
 
-.form-control{/*margin: 0!important;*/
- vertical-align: text-top;  
- text-align:top}
-
-.fr{font-size:14px;
-  color: rgb(225,225,225);
+.fr {
+  font-size: 14px;
+  color: rgb(225, 225, 225);
 }
-.terms{font-size:15px !important}
 
-.btn1{
-  max-width:120px;
-  padding:4px;
+.terms {
+  font-size: 15px;
+  padding-top: .5em;
+}
+
+.btn1 {
+  max-width: 120px;
+  padding: 4px;
   display: flex;
   justify-content: center;
   border-radius: 9px;
 }
 
-a {color:rgb(20,147,174);}
+a {
+  color: rgb(20, 147, 174);
+}
 
+.container-log {
+  height:97vh;
+}
+
+.log-init{
+  height:90%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+
+}
 /*--------------------------
 Status
 ---------------------------*/
 
 .status {
-  height:100%!important
+  height: 100%
 }
 
 /*--------------------------
@@ -163,83 +172,106 @@ Backgrounds
 ---------------------------*/
 
 
-
-body, html {
-  height:100% !important;
-   width: 100%!important
-  ;
+.img-background__upform {
+  min-height: 35vh;
+  max-height: 40vh;
 }
 
 
-.bg {
+
+.bg-2 {
   /* The image used */
-  background-image: url(../images/fondo3.jpg);
-  
-  /* Full height */
-  height: 100%!important;
-
-  /* Center and scale */
-  background-position: center!important;
-  background-repeat: no-repeat!important;
-  background-size: cover!important;
-  background-attachment:fixed!important }
-
-.bg-2 {/* The image used */
+  position: relative;
   background-image: url(../images/fondo2sinborde.png);
-  
+
   /* Full height */
-  height: 100%!important;
-  width: 100%!important;
+  height: 100% !important;
+  width: 100% !important;
 
   /* Center and scale*/
-  background-position:center!important;
-  background-repeat:no-repeat!important;
-  background-size:cover!important;
-  background-attachment:block!important;
- }
-  
- 
-  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: block;
+  z-index: 1
+}
+
+
+
 /*--------------------------
 FOOTER
 ---------------------------*/
 
-.pie-de-pagina{
-    position: fixed!important;
-    left: 0;
-    bottom:0%;
-    width: 103%;
-    height:2.8rem;
-    font-size: 0.9em
-  } 
+.pie-de-pagina {
+  position: relative;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: auto;
+  padding: 1em 0;
+  font-size: 0.9em;
+  margin: 0;
+}
 
-.pie-de-pagina2{
-  
-    left: 0;
-    bottom: 0%;
-    width: 100%;
-    height: 13%; 
-    text-align:center;
-  } 
+.pie-de-pagina2 {
+  position:sticky;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
+  height: 13%;
+  text-align: center;
+}
 
-footer div {font-size: 0.8rem}
+footer div {
+  font-size: 0.8rem
+}
 
 /*--------------------------
 Status Info  -imagenes
 ---------------------------*/
 
-.somos-scanai {padding-top: 11rem}
+
 .somos-info {
-  height:auto
+  height: auto
 }
-.comillas{
-position: relative;
-left:755%;
-top:4rem;}
+
+.comillas {
+  position: relative;
+  left: 755%;
+  top: 4rem;
+}
 
 /*--------------------------
-Formularios
+Formulario
+---------------------------*/
+h2 {
+  font-size: 1.2em;
+}
+
+.container-form {
+  min-width: 400px;
+  margin-top: 1.5rem
+}
+
+.btn {
+  border-radius: 9px;
+  min-width: 6em;
+}
+
+@media(min-width:1361px) {
+  body {
+    font-size: .9rem;
+  }
+}
+
+/*--------------------------
+animacion
 ---------------------------*/
 
-.btn {border-radius: 9px!important}
-
+.particles {
+  background-color: #17a2b8;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 10px;
+}
