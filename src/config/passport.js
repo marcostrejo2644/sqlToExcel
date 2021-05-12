@@ -11,12 +11,16 @@ passport.use(
       [username],
       async (err, response) => {
         if (err) throw err;
-        const user = response[0];
-        const test = await bcrypt.compareSync(password, user.password);
-        if (test) {
-          return done(null, user);
-        } else {
-          return done(null, false);
+        if(response.length == 0){
+          return done(null, false)
+        }else{
+          const user = response[0];
+          const test = await bcrypt.compareSync(password, user.password);
+          if (test) {
+            return done(null, user);
+          } else {
+            return done(null, false);
+          }
         }
       }
     );
