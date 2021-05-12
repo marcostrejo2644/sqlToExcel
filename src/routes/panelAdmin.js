@@ -1,64 +1,28 @@
 const router = require('express').Router();
-const bcrypt = require('bcryptjs');
-const passport = require('passport');
-const dbUser = require('../database');
-const excel = require('exceljs');
+const { 
+  renderLogin,
+  renderDashboard,
+  authenticate,
+  authenticateNext,
+  logout,
+  downloadExcel,
+  redirectLogin
+} = require('../controllers/panelAdmin.controllers')
 
-router.get('/', (req, res) => {
-  res.redirect('/panel-admin/login')
-});
 
 //Acceder al panel
-router.get('/login', (req, res) => {
-  res.render('login');
-});
+router.get('/', redirectLogin);
 
-router.post('/login',
-  passport.authenticate('local', {
-    successRedirect: '/panel-admin/dashboard',
-    failureRedirect: '/panel-admin/login',
-  })
-);
+router.get('/login', renderLogin);
 
-router.get('/dashboard',
-(req, res, next) => {
-    if (req.isAuthenticated()) return next();
-    else res.redirect('/panel-admin/login');
-  }, (req, res) => {
-    res.render('dashboard', {layout: false});
-  }
-);
+router.post('/login', authenticate);
 
-router.post('/logout', (req, res) => {
-  req.logout();
-  res.redirect('/panel-admin/login');
-})
+router.get('/dashboard', authenticateNext, renderDashboard);
+
+router.post('/logout', logout)
 
 // Bajar Excel
-router.post('/user-download',
-  (req, res, next) => {
-    if (req.isAuthenticated()) return next();
-    else res.redirect('/panel-admin/login');
-  }, (req, res) => {
-    dbUser.query('SELECT * FROM persons', (err, response, fields) => {
-      if (err) throw err;
-      const data = response;
-      let excelData = new excel.Workbook();
-      let testExcel = excelData.addWorksheet('users');
-      testExcel.columns = [
-        { header: 'Id', key: 'id', width: 10 },
-        { header: 'Name', key: 'name', width: 10 },
-        { header: 'Email', key: 'email', width: 10 },
-        { header: 'Address', key: 'address', width: 10 },
-        { header: 'Age', key: 'age', width: 10 },
-        { header: 'Telephone', key: 'telephone', width: 10 },
-      ];
-      testExcel.addRows(data);
-      excelData.xlsx.writeFile('users.xlsx').then((d) => {
-        res.download('users.xlsx')
-      });
-    });
-});
+router.post('/user-download', authenticateNext, downloadExcel);
 
 
 // Manejar Administradores
