@@ -1,6 +1,10 @@
 const personsCtrl = {};
 const database = require('../database.js');
 
+personsCtrl.renderForm = (req, res) => {
+  res.render('form', {message: false});
+};
+
 personsCtrl.userExist = (req, res, next) => {
   const { email } = req.body;
   if(email){
@@ -8,7 +12,10 @@ personsCtrl.userExist = (req, res, next) => {
     (err, response, field) => {
       if(err) throw err;
       if(response.length == 0) next();
-      else res.render('form', { message: true })
+      else res.render('form', { 
+        message: true, 
+        content: 'El email ya esta registrado'
+      })
     });
   }else {
     res.send('failed')
@@ -23,7 +30,10 @@ personsCtrl.addUser = (req, res) => {
       [email, name, location],
       (err, response, field) => {
         if (err) throw err;
-        res.redirect('/')
+        res.render('form', { 
+          message: true, 
+          content: 'Registrado correctamente para el concurso'
+        })
       }
     );
   } else{

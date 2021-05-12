@@ -1,9 +1,7 @@
 const router = require('express').Router();
-const { addUser, userExist } = require('../controllers/persons.controllers');
+const { addUser, userExist, renderForm } = require('../controllers/persons.controllers');
 
-router.get('/', (req, res) => {
-  res.render('form', {message: false});
-});
+router.get('/', renderForm);
 
 router.post('/add-user', userExist, addUser);
 
