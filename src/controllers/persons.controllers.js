@@ -18,7 +18,10 @@ personsCtrl.userExist = (req, res, next) => {
       })
     });
   }else {
-    res.send('failed')
+    res.render('form', {
+      message: true,
+      content: 'Ingresa todos los campos para poder registrarte'
+    })
   }
 }
 
