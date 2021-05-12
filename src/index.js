@@ -14,7 +14,7 @@ const app = express();
 require('./database');
 require('./config/passport');
 
-// Config
+// Config 
 app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs',
@@ -48,5 +48,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Server on
 app.listen(app.get('port'), (req, res) => {
-  console.log(`sv on localhost/${app.get('port')}`);
+  console.log(`sv on http://localhost:${app.get('port')}`);
 });
