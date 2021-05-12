@@ -8,7 +8,7 @@ personsCtrl.userExist = (req, res, next) => {
     (err, response, field) => {
       if(err) throw err;
       if(response.length == 0) next();
-      else res.send('email is already in the competition')
+      else res.render('form', { message: true })
     });
   }else {
     res.send('failed')
